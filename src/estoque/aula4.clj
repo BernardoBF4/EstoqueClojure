@@ -24,3 +24,52 @@
   (+ valor 3))
 
 (println (update precos 0 soma-3))
+
+
+
+
+
+
+(defn aplica-desconto?
+  [valor-bruto]
+  (> valor-bruto 100))
+
+(defn valor-descontado
+  "Retorna o valor com desconto de 10% se o valor bruto for estritamente maior que 100."
+  [valor-bruto]
+  (if (aplica-desconto? valor-bruto)
+    (let [taxa-de-desconto (/ 10 100)
+          desconto         (* valor-bruto taxa-de-desconto)]
+      (- valor-bruto desconto))
+    valor-bruto))
+
+(println (map valor-descontado precos))
+
+(println (range 10))
+(println (filter even? (range 10)))
+
+
+
+
+(println (filter aplica-desconto? precos))
+(println (map valor-descontado (filter aplica-desconto? precos)))
+
+(println (reduce + precos))
+
+(defn minha-soma
+  [valor-1 valor-2]
+  (println "Somando"valor-1"e"valor-2)
+  (+ valor-1 valor-2))
+
+(println "######")
+(println (reduce minha-soma precos))
+(println (reduce minha-soma (range 10)))
+(println (reduce minha-soma 0 [15]))
+
+
+
+
+
+
+
+
