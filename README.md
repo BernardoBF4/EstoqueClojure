@@ -1,10 +1,10 @@
-# estoque
+# Starting with Clojure
 
 A Clojure library designed to ... well, that part is up to you.
 
 ## Usage
 
-FIXME
+Understanding how the language works and the getting the basic commands.
 
 ## License
 
